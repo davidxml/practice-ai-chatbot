@@ -1,21 +1,29 @@
-# writing the logics for chatbot greeting
-""" Chatbot meant to greet, would need
-- Name
-- Time of the day
-"""
+# brain.py
 
-# step 1 --> Hey there, what's the name?
-print("Hey there, what's the name?")
+bot_brain = {
+    # --- GREETINGS ---
+    "hello": ["Hi there!", "What's up?", "System online. Greetings!"],
+    "hi": ["Hello!", "How can I help?", "Good to see you!"],
+    "bye": ["Catch you later!", "Shutting down...", "Goodbye!"],
+    
+    # --- (Student Names) ---
+    "ameen": ["Ameen! The absolute legend. How is the coding going?", "Hello Ameen, ready to build something awesome?"],
+    "ibrahim": ["Ibrahim in the house! Let's write some Python.", "Welcome, Ibrahim. Your terminal awaits."],
+    "aminat": ["Aminat! So glad you're here. Let's code.", "Hello Aminat! Ready to be a software engineer?"],
+    "the light": ["Ah, The Light! Illuminating the terminal today, I see.", "Welcome, The Light. Keep shining bright!"],
+    "tamilore": ["Tamilore! The master of the keyboard.", "Hey Tamilore, let's compile some greatness!"],
 
-# step 2 --> accepts user's name
-name = input("name: ")
-print(name)
+    # --- MEANINGFUL QUESTIONS & KNOWLEDGE ---
+    "what is python": ["Python is a superpower. It's a programming language that lets you control computers.", "It is the language powering YouTube, Instagram, and me!"],
+    "who made you": ["I was engineered by an elite class of programmers.", "I am a product of Python and pure logic."],
+    "how are you": ["Running flawlessly! My CPU is chilled and my RAM is clear.", "I'm just a few lines of code, but I feel great!"],
+    "joke": ["Why do programmers prefer dark mode? Because light attracts bugs!", "I would tell you a Wi-Fi joke, but we might lose connection."]
+}
 
-# step 3 --> Tell python to say "Hi" with your name
-print("Hi " + name)
+fallbacks = [
+    "I don't have that data in my matrix yet.", 
+    "Could you try asking that differently?", 
+    "That is beyond my current programming.",
+    "Interesting... tell me more."
+]
 
-# step 4 --> Get the time of the 
-time_of_the_day = input("What time of the day is it?: ")
-
-# step 5 --> Greet with all data provided 
-print(f"Yeah! Hey {name}, Good {time_of_the_day}. It's nice to have you in here.")
